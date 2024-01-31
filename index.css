@@ -30,7 +30,7 @@ body{
     border: 2px;
     outline: none;
 }
-.moives {
+.movies {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -44,10 +44,18 @@ body{
 }
 .movie-info {
     color: aliceblue;
+    padding: 10px 0px;
+}
+.movie-title {
+    color: #ffffff;
 }
 .movie-cover-inner {
     position: relative;
     
+}
+.movie-cover {
+    max-width: 100%;
+    height: 100%;
 }
 .movie-cover-darkened {
 background-color: #000000;
@@ -58,6 +66,156 @@ left: 0;
 right: 0;
 max-width: 100%;
 height: 100%;
-
+z-index: 1;
 }
 
+.movie-cover-darkened:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+
+.movie-category {
+    font-size: 14px;
+color: rgb(242, 211, 13);
+}
+.movie-avarage {
+position: absolute;
+top:10px ;
+left: 10px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 36px;
+height: 36px;
+color: #ffffff;
+background-color: #1a191f;
+
+
+}
+.movie-avarage--orange {
+    border: 2px solid orange;
+}
+.movie-avarage--green {
+border: 2px solid green;
+}
+.movie-avarage--red{
+    border: 2px solid red;
+}
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a191f;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    height: 70px;
+}
+
+.header-logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: azure;
+}
+
+.header-search {
+    padding: 6px;
+    border-radius: 8px;
+    border: 2px;
+    outline: none;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.movie {
+    width: 240px;
+    margin: 10px;
+    position: relative;
+}
+
+.movie-info {
+    color: aliceblue;
+    padding: 10px 0px;
+}
+
+.movie-title {
+    color: #ffffff;
+}
+
+.movie-cover-inner {
+    position: relative;
+}
+
+.movie-cover {
+    max-width: 100%;
+    height: 100%;
+}
+
+.movie-cover-darkened {
+    background-color: #000000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.movie-cover-darkened:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+.movie-category {
+    font-size: 14px;
+    color: rgb(242, 211, 13);
+}
+
+.movie-avarage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: #ffffff;
+    background-color: #1a191f;
+}
+
+.movie-avarage--orange {
+    border: 2px solid orange;
+}
+
+.movie-avarage--green {
+    border: 2px solid green;
+}
+
+.movie-avarage--red {
+    border: 2px solid red;
+} */
