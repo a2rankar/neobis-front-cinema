@@ -27,6 +27,16 @@ fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films?order=RATING&type=ALL&
     .then(json => showMovies(json)) // Pass the JSON data to showMovies function
     .catch(err => console.log(err));
 
+function movieGetRating(rate) {
+    if (rate >= 7) {
+        return "green";
+    } else if (rate > 5 && rate < 7) {
+        return "orange";
+    } else { 
+        return "red";
+    }
+}
+
 function showMovies(json) {
     const moviesEl = document.querySelector(".movies");
 
@@ -35,15 +45,19 @@ function showMovies(json) {
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
             <div class="movie-cover-inner">
-                <img src="${movie.posterUrlPreview}" alt="${movie.nameRu}"/>
+                <img
+                 src="${movie.posterUrlPreview}"
+                 class="movie-cover"
+                 alt="${movie.nameRu}"
+                />
                 <div class="movie-cover-darkened"></div>
             </div>
             <div class="movie-info">
                 <div class="movie-title">${movie.nameRu}</div>
                 <div class="movie-category">${movie.genres.map(
-                    (genre) => `${genre.genre}`
+                    (genre) => ` ${ genre.genre}`
                 )}</div>
-                <div class="movie-avarage movie-avarage--green">${movie.rating}</div>
+                <div class="movie-avarage movie-avarage--${movieGetRating(movie.ratingKinopoisk)}">${movie.ratingKinopoisk}</div>
             </div>`;
         moviesEl.appendChild(movieEl);
     });
